@@ -1,13 +1,25 @@
+# 🎬 CineReserve: High-Concurrency Movie Booking Platform
 
-# Movie Booking Website
+**Technologies:** **PHP** (98.3%), **Vanilla JavaScript**, **MySQL (PHPMyAdmin)**, HTML5/CSS3, Bootstrap4
 
-The project aims to develop a website where customers can book movie tickets with ease
-without standing in long queues. The project objective is to book cinema tickets online. The
-Movie Ticket Booking System is an Internet based application that can be accessed throughout
-the net and can be accessed by anyone who has a net connection. The website provides
-complete information regarding currently running movies, upcoming movies with details of
-show timings, available seats in different theatres
+**Project Description:** A full-stack web application designed to manage the entire user lifecycle for movie ticket booking—from browsing showtimes to securely reserving seats and generating tickets. This project focuses on building a robust, database-driven backend to handle high-volume transactions and prevent data integrity issues.
 
+## ✨ Key Architectural Highlights
+
+* **Concurrency Management (High-Concurrency):** Developed the core booking logic (`process.php`, `booking.php`) to manage and update seat availability in the MySQL database in real-time. This is critical for preventing the **double-booking** of seats when multiple users attempt to reserve the same ticket simultaneously.
+* **Database Schema Design:** Engineered a relational database schema (MySQL, deployed via `iwp.sql`) to manage complex relationships between Movies, Showtimes, Theaters, and individual Bookings.
+* **Visual Seat State Management:** Used **Vanilla JavaScript** on the client-side (`seat.php`) to dynamically render the auditorium layout and handle the selection state (Available, Selected, Booked), providing a smooth user experience.
+* **Full End-to-End Workflow:** The application manages the entire booking pipeline, including secure user authentication (`login.php`), seat selection, payment simulation (`payment.php`), and final ticket generation (`ticket.php`).
+* **Administrative Control:** Includes a separate Admin interface (`admin.php`, `AddMovie.php`) for managing inventory, showtimes, and movie details.
+
+## 🛠️ Tech Stack Breakdown
+
+| Component | Technology | Role |
+| :--- | :--- | :--- |
+| **Backend/Server** | **PHP** (Core Logic) | Handles all server-side processing, database interaction, and business logic. |
+| **Database** | **MySQL** | Relational database management (using the `iwp.sql` schema). |
+| **Frontend** | **HTML5/CSS3/JavaScript** | Client-side interactivity and responsive design (using Bootstrap4). |
+| **Concurrency** | **SQL Transactional Logic** | Implicitly used for guaranteeing seat integrity during the booking process. |
 
 ## Authors
 
@@ -45,13 +57,6 @@ show timings, available seats in different theatres
  - Import the file "iwp.sql" situated in the IWP folder (htdocs)
  - You are now good to go
  - Open the IWP folder in any text editor/IDE and make changes.
-    
-## Tech Stack
-
-**Client:** HTML5/CSS3/JS, Bootstrap4
-
-**Server:** PHP, MySQL
-
   
 ## Acknowledgements
 
